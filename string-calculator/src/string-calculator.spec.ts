@@ -65,6 +65,13 @@ describe('String Calculator', () => {
 
 			expect(() => { sut.add('1,-2,3,-4'); }).to.throw('negatives not allowed: -2, -4');
 		});
+
+		it('passing a number bigger than 1000 is ignored', () => {
+			const sut = new StringCalculator();
+			const result = sut.add('1001,8');
+
+			expect(result).to.be.equal(8);
+		});
 	});
 	describe('getCalledCount', () => {
 		it('should return how many times add is invoked', () => {

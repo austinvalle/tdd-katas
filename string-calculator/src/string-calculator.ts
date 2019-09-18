@@ -17,7 +17,7 @@ export class StringCalculator {
 		const numbers = this.convertToNumbersArr(numbersString, delimiter);
 		this.validateNumbers(numbers);
 
-		return numbers.reduce((prev, curr) => prev + curr, 0);
+		return numbers.reduce((prev, curr) => curr <= 1000 ? prev + curr : prev, 0);
 	}
 
 	private validateNumbers(numbers: number[]) {

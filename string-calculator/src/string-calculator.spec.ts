@@ -10,4 +10,11 @@ describe('String Calculator', () => {
 
 		expect(result).to.be.equal(0);
 	});
+
+	it('just one number returns the same number', () => {
+		const sut = new StringCalculator();
+		const result = sut.add('9');
+
+		expect(result).to.be.equal(9);
+	});
 });

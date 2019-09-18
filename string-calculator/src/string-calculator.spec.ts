@@ -17,4 +17,11 @@ describe('String Calculator', () => {
 
 		expect(result).to.be.equal(9);
 	});
+
+	it('two numbers, delimited by a comma, returns the sum', () => {
+		const sut = new StringCalculator();
+		const result = sut.add('16,8');
+
+		expect(result).to.be.equal(24);
+	});
 });

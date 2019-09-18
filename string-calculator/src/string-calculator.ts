@@ -1,5 +1,8 @@
 export class StringCalculator {
 	public add(numbers: string): number {
-		return Number(numbers);
+		const arr = numbers.split(',');
+		if (arr.length <= 1) { return Number(numbers); }
+
+		return Number(arr[0]) + Number(arr[1]);
 	}
 }

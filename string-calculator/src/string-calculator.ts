@@ -4,7 +4,7 @@ export class StringCalculator {
 		return numbers.reduce((prev, curr) => prev + curr, 0);
 	}
 
-	private convertToNumbersArr(str: string) {
-		return str.split(',').map(val => Number(val));
+	private convertToNumbersArr(str: string): number[] {
+		return str.split(/[\n,]+/).map(val => Number(val));
 	}
 }

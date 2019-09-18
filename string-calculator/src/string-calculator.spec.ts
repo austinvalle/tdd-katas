@@ -31,4 +31,18 @@ describe('String Calculator', () => {
 
 		expect(result).to.be.equal(38);
 	});
+
+	it('three numbers, delimited by commas and newlines, returns the sum', () => {
+		const sut = new StringCalculator();
+		const result = sut.add('8\n45,22');
+
+		expect(result).to.be.equal(75);
+	});
+
+	it('six numbers, delimited by newlines, returns the sum', () => {
+		const sut = new StringCalculator();
+		const result = sut.add('8\n45\n22\n1\n1\n1');
+
+		expect(result).to.be.equal(78);
+	});
 });

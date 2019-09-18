@@ -1,8 +1,10 @@
 export class StringCalculator {
-	public add(numbers: string): number {
-		const arr = numbers.split(',');
-		if (arr.length <= 1) { return Number(numbers); }
+	public add(numbersString: string): number {
+		const numbers = this.convertToNumbersArr(numbersString);
+		return numbers.reduce((prev, curr) => prev + curr, 0);
+	}
 
-		return Number(arr[0]) + Number(arr[1]);
+	private convertToNumbersArr(str: string) {
+		return str.split(',').map(val => Number(val));
 	}
 }

@@ -24,4 +24,11 @@ describe('String Calculator', () => {
 
 		expect(result).to.be.equal(24);
 	});
+
+	it('five numbers, delimited by a comma, returns the sum', () => {
+		const sut = new StringCalculator();
+		const result = sut.add('10,22,3,2,1');
+
+		expect(result).to.be.equal(38);
+	});
 });

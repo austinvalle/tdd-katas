@@ -7,6 +7,12 @@ export class StringCalculator {
 		}
 
 		const numbers = this.convertToNumbersArr(numbersString, delimiter);
+		const negativeNumber = numbers.find((nbr) => nbr < 0);
+
+		if (negativeNumber) {
+			throw new Error(`negatives not allowed: ${negativeNumber}`);
+		}
+
 		return numbers.reduce((prev, curr) => prev + curr, 0);
 	}
 

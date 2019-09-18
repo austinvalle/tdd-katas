@@ -52,4 +52,10 @@ describe('String Calculator', () => {
 
 		expect(result).to.be.equal(3);
 	});
+
+	it('passing one negative number throws an exception w/ detail', () => {
+		const sut = new StringCalculator();
+
+		expect(() => { sut.add('1,2,3,-4'); }).to.throw('negatives not allowed: -4');
+	});
 });

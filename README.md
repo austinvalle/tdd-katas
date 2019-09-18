@@ -2,5 +2,5 @@
 ## String Calculator
 See [instructions](./string-calculator/String-Calculator.pdf)
 
-### Current progress
+#### Current progress
 - On #10

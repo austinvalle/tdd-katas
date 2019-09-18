@@ -1,2 +1,2 @@
 # tdd-kata-string-calculator
-practicing TDD with string calculator exercise
+See [instructions](./TDD-Kata-String-Calculator.pdf)

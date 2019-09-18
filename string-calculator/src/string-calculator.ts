@@ -1,5 +1,13 @@
 export class StringCalculator {
+	private _numberOfTimesCalled = 0;
+
+	public getCalledCount(): number {
+		return this._numberOfTimesCalled;
+	}
+
 	public add(numbersString: string): number {
+		this._numberOfTimesCalled++;
+
 		let delimiter = ',';
 		if (numbersString.indexOf('//') !== -1) {
 			delimiter = numbersString.charAt(2);

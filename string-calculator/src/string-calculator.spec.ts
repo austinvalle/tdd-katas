@@ -45,4 +45,11 @@ describe('String Calculator', () => {
 
 		expect(result).to.be.equal(78);
 	});
+
+	it('override delimiter with semi-colon, returns the sum', () => {
+		const sut = new StringCalculator();
+		const result = sut.add('//;\n1;2');
+
+		expect(result).to.be.equal(3);
+	});
 });

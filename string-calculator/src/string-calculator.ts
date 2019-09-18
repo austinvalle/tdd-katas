@@ -7,13 +7,18 @@ export class StringCalculator {
 		}
 
 		const numbers = this.convertToNumbersArr(numbersString, delimiter);
-		const negativeNumber = numbers.find((nbr) => nbr < 0);
-
-		if (negativeNumber) {
-			throw new Error(`negatives not allowed: ${negativeNumber}`);
-		}
+		this.validateNumbers(numbers);
 
 		return numbers.reduce((prev, curr) => prev + curr, 0);
+	}
+
+	private validateNumbers(numbers: number[]) {
+		const negativeNumbers = numbers.filter((nbr) => nbr < 0);
+
+		if (negativeNumbers.length > 0) {
+			const errDetail = negativeNumbers.join(', ');
+			throw new Error(`negatives not allowed: ${errDetail}`);
+		}
 	}
 
 	private convertToNumbersArr(str: string, delimiter: string): number[] {

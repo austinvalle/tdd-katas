@@ -58,4 +58,10 @@ describe('String Calculator', () => {
 
 		expect(() => { sut.add('1,2,3,-4'); }).to.throw('negatives not allowed: -4');
 	});
+
+	it('passing multiple negative number throws an exception w/ detail', () => {
+		const sut = new StringCalculator();
+
+		expect(() => { sut.add('1,-2,3,-4'); }).to.throw('negatives not allowed: -2, -4');
+	});
 });

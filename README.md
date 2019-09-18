@@ -1,3 +1,3 @@
 # tdd-katas
 ## String Calculator
-See [instructions](./TDD-Kata-String-Calculator.pdf)
+See [instructions](./string-calculator/String-Calculator.pdf)

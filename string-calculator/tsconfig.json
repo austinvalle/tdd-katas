@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"lib": [
+			"es6",
+			"dom"
+		],
+		"target": "es2017",
+		"module": "commonjs",
+		"allowJs": true,
+		"checkJs": true,
+		"outDir": "./dist",
+		"sourceMap": true,
+		"strict": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true
+	},
+	"include": [
+		"**/*.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
+}
